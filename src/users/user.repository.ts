@@ -22,6 +22,9 @@ export class UsersRepository {
     return await this.Users.find();
   }
   async GetUser(email: string) {
-    return await this.Users.findOne({ where: { email: email } });
+    return await this.Users.findOne({ where: { email } });
+  }
+  async GetUserById(id: string) {
+    return await this.Users.findOne({ where: { id } });
   }
 }
