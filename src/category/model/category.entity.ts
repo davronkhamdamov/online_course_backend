@@ -6,4 +6,6 @@ export class CategoryEntity {
   id: string;
   @Column({ type: 'varchar', nullable: false })
   name: string;
+  @Column({ type: 'varchar' })
+  img_url: string;
 }
