@@ -32,4 +32,7 @@ export class CourseRepository {
     course.description = body.description;
     return await this.Course.save(course);
   }
+  async GetCourseByCategoryId(id: string) {
+    return await this.Course.find({ where: { category_id: id } });
+  }
 }

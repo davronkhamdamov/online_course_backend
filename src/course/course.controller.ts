@@ -13,7 +13,6 @@ import { Request } from 'express';
 import { AuthGuard } from 'src/guard/auth.guard';
 
 @Controller('course')
-@UseGuards(AuthGuard)
 export class CourseController {
   constructor(private CourseService: CourseService) {}
   @Get('list')
